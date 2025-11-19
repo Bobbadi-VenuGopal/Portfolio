@@ -1,0 +1,177 @@
+/* Color Variables based on your input */
+:root {
+    --vanilla: #F1EADA;    /* Background */
+    --sand: #CEC1A8;       /* Section Accent/Divider */
+    --tobacco: #B59E7D;    /* Primary Accent/Headers */
+    --mountain: #AAA396;   /* Body Text */
+    --mahogany: #584738;   /* Darkest Text/Icons */
+}
+
+/* Basic Reset and Typography */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--vanilla);
+    color: var(--mahogany);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    color: var(--mahogany);
+    font-weight: 700;
+}
+
+a {
+    color: var(--tobacco);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--sand);
+}
+
+/* Header Section (Banner) */
+.header-section {
+    background-color: var(--mahogany);
+    color: var(--vanilla);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.header-section h1 {
+    color: var(--tobacco); /* Name color */
+    font-size: 2.8em;
+    margin-bottom: 5px;
+}
+
+.header-section .subtitle {
+    color: var(--sand);
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.contact-info a {
+    color: var(--vanilla);
+    margin: 0 10px;
+    font-size: 0.9em;
+}
+
+.contact-info a:hover {
+    color: var(--tobacco);
+}
+
+/* Main Content Sections */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 30px 0;
+    border-bottom: 1px solid var(--sand);
+}
+
+.section-title {
+    font-size: 1.8em;
+    color: var(--tobacco);
+    border-left: 5px solid var(--tobacco);
+    padding-left: 10px;
+    margin-bottom: 20px;
+    background-color: var(--sand);
+    padding: 5px 10px;
+}
+
+/* Experience/Timeline Styling */
+.timeline-item {
+    margin-bottom: 20px;
+    border-left: 3px solid var(--sand);
+    padding-left: 15px;
+}
+
+.job-title {
+    color: var(--tobacco);
+    margin-bottom: 5px;
+}
+
+.company-date {
+    color: var(--mountain);
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: var(--sand);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card .project-title {
+    color: var(--mahogany);
+    font-size: 1.3em;
+}
+
+.project-card .tech-stack {
+    color: var(--mountain);
+    font-style: italic;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+/* Skills and Education Split */
+.split-section {
+    display: flex;
+    gap: 40px;
+    padding: 30px 0;
+}
+
+.skills-section, .education-section {
+    flex: 1;
+    border-bottom: none; /* remove bottom border for split sections */
+}
+
+.skills-container h4 {
+    color: var(--tobacco);
+    border-bottom: 1px dotted var(--mountain);
+    padding-bottom: 5px;
+}
+
+.highlight {
+    color: var(--tobacco);
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--mahogany);
+    color: var(--sand);
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header-section h1 {
+        font-size: 2em;
+    }
+    .contact-info a {
+        display: block;
+        margin: 5px 0;
+    }
+    .split-section {
+        flex-direction: column;
+    }
+}
